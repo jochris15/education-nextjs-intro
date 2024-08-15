@@ -10,9 +10,7 @@ export default async function Products() {
             <main className="grid grid-cols-3 gap-10 py-20">
                 {products.map((product) => {
                     return (
-                        <>
-                            <ProductCard product={product} key={product.id} />
-                        </>
+                        <ProductCard product={product} key={product.id} />
                     )
                 })}
             </main>
