@@ -1,5 +1,5 @@
-import { ProductType } from "@/type"
-import ProductCard from "@/components/ProductCard"
+import { ProductType } from "@/types";
+import ProductCard from "@/components/ProductCard";
 
 export default async function Products() {
     const response = await fetch('https://dummyjson.com/products', { cache: 'no-store' })
@@ -7,13 +7,14 @@ export default async function Products() {
 
     return (
         <>
-            <main className="grid grid-cols-3 gap-10 py-20">
+            <div className="grid grid-cols-3 gap-6 px-20 py-10">
                 {products.map((product) => {
                     return (
-                        <ProductCard product={product} key={product.id} />
+                        <ProductCard key={product.id} product={product} />
                     )
                 })}
-            </main>
+
+            </div>
         </>
     )
 }

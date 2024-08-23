@@ -41,7 +41,7 @@ Dengan menggunakan fetch, otomatis ada cachingnya. Jika kalian tidak mau menggun
 fetch('https://...', { cache: 'no-store' })
 ```
 
-[Dokumentasi fetching data](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating)
+[Dokumentasi fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 <br>
 [Dokumentasi caching](https://nextjs.org/docs/app/building-your-application/data-fetching/caching-and-revalidating)
 
