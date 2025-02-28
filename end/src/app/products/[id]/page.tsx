@@ -1,4 +1,4 @@
-import { ProductType } from "@/types"
+import { ProductType } from "@/type"
 import Link from "next/link"
 
 export default async function DetailProduct({ params }: { params: { id: number } }) {
@@ -8,30 +8,28 @@ export default async function DetailProduct({ params }: { params: { id: number }
 
     return (
         <>
-            <div className="flex justify-center items-center h-screen">
-                <div className="card bg-base-100 w-4/5">
-                    <div className="card-actions justify-start">
-                        <Link href='/products' className="btn btn-primary">Back to Products</Link>
-                    </div>
-                    <figure>
-                        <img
-                            src={product.thumbnail}
-                            alt="product" />
-                    </figure>
-                    <div className="card-body">
-                        <h2 className="card-title">
-                            {product.title}
-                        </h2>
-                        <div className="flex flex-row gap-2">
-                            <div className="badge badge-outline">{product.category}</div>
-                            <p className="text-green-600">${product.price}</p>
-                        </div>
-                        <div className="divider"></div>
-                        <p>{product.description}</p>
+            <div className="flex flex-start bg-red-400 border-2 border-black p-5 rounded-lg shadow-[2px_2px_0px_rgba(0,0,0,1)] h-full mt-10">
+                <div>
+                    <img
+                        src={product.thumbnail}
+                        alt="product image"
+                        className="border-2 border-black rounded-lg shadow-[2px_2px_0px_rgba(0,0,0,1)] h-full"
+                    />
+                </div>
+                <div className="flex mx-10 flex-col w-1/2 justify-between">
+                    <b className="text-4xl mb-5">
+                        {product.title}
+                    </b>
+                    <p className="h-full">
+                        {product.description}
+                    </p>
+                    <div>
+                        <Link href="/products" >
+                            <button className="bg-white border-2 border-black p-2 rounded-lg shadow-[2px_2px_0px_rgba(0,0,0,1)] w-40">Back</button>
+                        </Link>
                     </div>
                 </div>
-            </div>
-
+            </div >
         </>
     )
 }

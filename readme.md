@@ -35,6 +35,7 @@ Apa itu page? page adalah sebuah component yang unik / spesifik untuk halaman te
 [Dokumentasi linking & navigating](https://nextjs.org/docs/app/building-your-application/routing/linking-and-navigating)
 
 ## Fetching Data 
+Untuk servernya kita akan menggunakan [DummyJson.com](https://dummyjson.com/)
 
 Dengan menggunakan fetch, otomatis ada cachingnya. Jika kalian tidak mau menggunakan fitur caching, bisa menambahkan :
 ```ts
