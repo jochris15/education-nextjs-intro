@@ -12,7 +12,7 @@ export default async function Products() {
             <div className="mt-8">
                 {/* Main Product */}
                 <div id="PAGE-HOME" className="min-h-screen flex items-center justify-center">
-                    <main className="my-8 bg-white grid grid-cols-4 gap-5">
+                    <main className="my-8 grid grid-cols-4 gap-5">
                         {products.map((product) => {
                             return <ProductCard key={product.id} product={product} />
                         })}
