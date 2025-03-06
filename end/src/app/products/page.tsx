@@ -1,5 +1,4 @@
 import ProductCard from "@/components/ProductCard";
-import { Product } from "@/interfaces/global";
 
 export default async function Products() {
     const response = await fetch('https://dummyjson.com/products', { cache: 'no-store' })

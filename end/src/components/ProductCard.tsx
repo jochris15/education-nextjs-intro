@@ -1,4 +1,3 @@
-import { Product } from "@/interfaces/global";
 import Link from "next/link"
 
 export default function ProductCard({ product }: { product: Product }) {
