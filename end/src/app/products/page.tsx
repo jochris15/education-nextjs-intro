@@ -1,7 +1,7 @@
 import ProductCard from "@/components/ProductCard";
 
 export default async function Products() {
-    const response = await fetch('https://dummyjson.com/products', { cache: 'no-store' })
+    const response = await fetch('https://dummyjson.com/products')
     const { products }: { products: Product[] } = await response.json()
 
     console.log(products);
