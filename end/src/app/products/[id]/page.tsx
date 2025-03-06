@@ -1,10 +1,10 @@
-import { ProductType } from "@/type"
+import { Product } from "@/interfaces/global"
 import Link from "next/link"
 
 export default async function DetailProduct({ params }: { params: { id: number } }) {
     const { id } = params
     const response = await fetch(`https://dummyjson.com/products/${id}`, { cache: 'no-store' })
-    const product: ProductType = await response.json()
+    const product: Product = await response.json()
 
     return (
         <>

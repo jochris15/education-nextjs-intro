@@ -1,7 +1,7 @@
-import { ProductType } from "@/type";
+import { Product } from "@/interfaces/global";
 import Link from "next/link"
 
-export default function ProductCard({ product }: { product: ProductType }) {
+export default function ProductCard({ product }: { product: Product }) {
     return (
         <>
             <div className="flex flex-col flex-start items-center bg-white border-2 border-black p-5 shadow-[2px_2px_0px_rgba(0,0,0,1)] h-full">

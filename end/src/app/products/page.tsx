@@ -1,9 +1,9 @@
 import ProductCard from "@/components/ProductCard";
-import { ProductType } from "@/type";
+import { Product } from "@/interfaces/global";
 
 export default async function Products() {
     const response = await fetch('https://dummyjson.com/products', { cache: 'no-store' })
-    const { products }: { products: ProductType[] } = await response.json()
+    const { products }: { products: Product[] } = await response.json()
 
     console.log(products);
 
