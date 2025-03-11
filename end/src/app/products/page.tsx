@@ -4,8 +4,6 @@ export default async function Products() {
     const response = await fetch('https://dummyjson.com/products')
     const { products }: { products: Product[] } = await response.json()
 
-    console.log(products);
-
     return (
         <>
             <div className="mt-8">
